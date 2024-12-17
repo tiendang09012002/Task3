@@ -1,0 +1,48 @@
+/* Căn giữa form */
+.post-form {
+  max-width: 600px; /* Giới hạn chiều rộng form */
+  margin: 0 auto; /* Căn giữa form */
+  padding: 20px; /* Khoảng cách bên trong form */
+  background-color: #ffffff; /* Màu nền form */
+  border-radius: 8px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+}
+
+/* Nhãn (label) */
+.post-form .form-group label {
+  font-weight: bold; /* In đậm nhãn */
+  color: #333; /* Màu chữ */
+  margin-bottom: 8px; /* Khoảng cách dưới */
+}
+
+/* Input và Textarea */
+.post-form .form-control {
+  border: 1px solid #ddd; /* Viền nhẹ */
+  border-radius: 4px; /* Bo góc */
+  padding: 10px; /* Khoảng cách bên trong */
+  font-size: 16px; /* Kích thước chữ */
+  margin-bottom: 15px; /* Khoảng cách dưới */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Hiệu ứng khi focus */
+}
+
+.post-form .form-control:focus {
+  border-color: #007bff; /* Viền xanh khi focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Hiệu ứng ánh sáng */
+  outline: none;
+}
+
+/* Nút bấm */
+.post-form .btn-primary {
+  background-color: #54cc1c; /* Màu xanh chính */
+  border-color: #54cc1c;
+  padding: 10px 20px; /* Khoảng cách trong nút */
+  font-size: 16px; /* Kích thước chữ */
+  border-radius: 4px; /* Bo góc */
+  cursor: pointer; /* Trỏ chuột */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Hiệu ứng hover */
+}
+
+.post-form .btn-primary:hover {
+  background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+  box-shadow: 0 4px 8px rgba(0, 91, 187, 0.3); /* Hiệu ứng bóng */
+}
