@@ -10,10 +10,9 @@ import PostList from "./Pages/PostList";
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
-        <h1 className="my-4">Quản lý Bài viết</h1>
+      <div className="container" id="main">
         <PostForm />
-        <PostList/>
+        <PostList />
       </div>
     </BrowserRouter>
   );

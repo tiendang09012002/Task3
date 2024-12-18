@@ -5,12 +5,11 @@ import { fetchPosts } from "../reduxSetup/reducer/action";
 const PostList = () => {
   const dispatch = useDispatch();
   const { posts, loading, error } = useSelector((state) => {
-    console.log(state); // Kiểm tra state
     return state.Post;
   });
-
-  useEffect(() => {
-    console.log('Dispatching fetchPosts action...');    
+  console.log(posts);
+  
+  useEffect(() => {    
     dispatch(fetchPosts());
   }, [dispatch]);
   
@@ -24,10 +23,10 @@ const PostList = () => {
   }
 
   return (
-    <div>
-      <h2>Danh sách bài viết</h2>
+    <div className="col-lg-7 col-md-6 col-sm-12">
+      <h1>Danh sách bài viết</h1>
       <ul className="list-group">
-        {posts?.data.map((post) => (
+        {posts?.map((post) => (
           <li key={post.id} className="list-group-item">
             <h5>{post.title}</h5>
             <p>{post.body}</p>

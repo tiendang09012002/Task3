@@ -13,15 +13,17 @@ export const fetchPosts = () => {
   return async (dispatch) => {
     dispatch({ type: FETCH_POSTS_REQUEST });
     try {
-      const response = await getPosts();
-      console.log(response);
-            
+      const response = await getPosts({
+        params: {
+          _limit: 3,
+        },
+      });
+      
       dispatch({
         type: FETCH_POSTS_SUCCESS,
-        payload: response,
+        payload: response.data,
       });
     } catch (error) {
-      console.error('Error fetching posts:', error);
       dispatch({
         type: FETCH_POSTS_FAILURE,
         payload: error.message,
@@ -31,10 +33,10 @@ export const fetchPosts = () => {
 };
 
 export const addPost = (post) => async (dispatch) => {
-  dispatch({ type: ADD_POST_REQUEST });
+  dispatch({ type: ADD_POST_REQUEST });  
   try {
-    const response = await createPost(post);
-    dispatch({ type: ADD_POST_SUCCESS, payload: response });
+    const response = await createPost(post);    
+    dispatch({ type: ADD_POST_SUCCESS, payload: response.data });
   } catch (error) {
     dispatch({ type: ADD_POST_FAILURE, payload: error.message });
   }
